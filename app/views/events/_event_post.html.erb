@@ -1,0 +1,11 @@
+<li>
+  <span class="content"><%= event_post.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(event_post.created_at) %> ago.
+  </span>
+  <% if current_user?(event_post.user) %>
+    <%= link_to "delete", event_post, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: event_post.content %>
+  <% end %>
+</li>
