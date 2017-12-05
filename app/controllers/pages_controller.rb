@@ -1,10 +1,11 @@
-class StaticPagesController < ApplicationController
+class PagesController < ApplicationController
 
   def home
     if signed_in?
-      @events  = current_user.events.build
+      #@myevents  = current_user.events.build
       #@feed_items = current_user.feed.paginate(page: params[:page])
     end
+  @upcoming_events =Event.upcoming
   end
 
   def help
