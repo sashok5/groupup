@@ -19,4 +19,5 @@ GroupUp::Application.routes.draw do
   match '/myevents', to: 'events#userevents', via:'get'
   match '/upcomingevents', to: 'events#upcoming', via:'get'
   match '/attendingevents', to: 'events#attending', via:'get'
+  match '/newevent', to: 'events#new', via:'get'
 end

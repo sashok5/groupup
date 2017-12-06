@@ -12,7 +12,9 @@
     </section>
   </aside>
   <div class="span8">
-    <%= render 'follow_form' if signed_in? %>
+
+      <%= link_to "Create a new event!", newevent_path,
+                  class: "btn btn-large btn-primary" %>
     <% if @user.events.any? %>
       <h3>Events (<%= @user.events.count %>)</h3>
       <ol class="events">
