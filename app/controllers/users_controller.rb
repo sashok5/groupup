@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @events = @user.events
+    @events = @user.events.paginate(page: params[:page])
     #@event_posts = @user.event_posts.paginate(page: params[:page])
   end
 

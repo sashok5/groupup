@@ -1,6 +1,6 @@
 <% if @upcoming_events.any? %>
   <ol class="events">
-    <%= render partial: 'shared/event_item', collection: @upcoming_events %>
+    <%= render partial: 'events/event', collection: @upcoming_events %>
   </ol>
 
 <% end %>

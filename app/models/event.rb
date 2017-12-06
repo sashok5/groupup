@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   validates :user_id, presence: true
 
   def self.upcoming(after = DateTime.now, limit = 100)
-    @upcoming_events = where('created_at > ?', after)
+    @upcoming_events = where('event_date > ?', after)
 
   end
 

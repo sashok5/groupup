@@ -1,5 +1,25 @@
 class EventsController < ApplicationController
 
+  def index
+    @events = Event.paginate(page: params[:page])
+  end
+
+  def userevents
+    @events = @event = current_user.events.paginate(page: params[:page])
+  end
+
+  def attending
+
+  end
+
+  def upcoming
+    @events = Event.upcoming.paginate(page: params[:page])
+  end
+
+  def past_events
+
+  end
+
   def create
     @event = current_user.events.build(event_params)
     if @event.save
