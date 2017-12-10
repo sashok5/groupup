@@ -7,7 +7,7 @@ GroupUp::Application.routes.draw do
   end
   resources :events do
     member do
-      #get :attending_events, :created_events
+      get 'interest'
       post 'attend'
       put 'rsvp'
     end

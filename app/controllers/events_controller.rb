@@ -1,7 +1,15 @@
 class EventsController < ApplicationController
 
   def index
+    @interest = nil
+
+    if params[:interest].nil?
     @events = Event.paginate(page: params[:page])
+    else
+       @events = Event.joins(:tags).where('tags.tag_id' => params[:interest])
+      @interest = Tag.find_by_tag_id(params[:interest])
+    end
+
   end
 
   def show
