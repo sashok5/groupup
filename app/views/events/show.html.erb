@@ -1,0 +1,46 @@
+<% provide(:title, @event.title) %>
+
+
+
+  <div class="jumbotron">
+    <h1 class="display-3"><%= @event.title %></h1>
+    <p class="lead"><%= @event.desc %>
+    </p>
+      <% if signed_in? %>
+
+        <% if current_user.attending?(@event) %>
+
+        <p>You aleady joined this even, please RSVP. Are you attending?
+
+          <%= form_for @attendance, url: {action: "rsvp"}, method: 'put' do |f| %>
+            Yes <%= f.radio_button :RSVP_Status, "1" %>
+            No <%= f.radio_button :RSVP_Status, "2" %>
+            Maybe <%= f.radio_button :RSVP_Status, "3" %>
+          <% end %>
+
+
+        </p>
+
+        <% else %>
+        <p>
+          <%= button_to 'Attend this event!', attend_event_path(@event), class: "btn btn-lg btn-success", form: {style: 'display:inline-block;'}, method: :post %>
+        </p>
+        <% end %>
+
+      <% end %>
+  </div>
+
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h4>When</h4>
+      <p>On <%= @event.event_date %>, at <%= @event.event_start_time %>.</p>
+
+      <h4>Where</h4>
+      <p><%= @event.addr %>, <%= @event.street %><br>
+        <%= @event.city %> <%= @event.state %>, <%= @event.zip %></p>
+
+      <h4>Hosted by</h4>
+      <p><%= @event.event_host %></p>
+    </div>
+
+  </div>

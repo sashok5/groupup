@@ -1,0 +1,34 @@
+
+<li>
+  <time datetime="<%= event.event_date %>">
+    <span class="day"><%= day(event.event_date) %></span>
+    <span class="month"><%= month(event.event_date)%></span>
+    <span class="year"><%= year(event.event_date) %></span>
+    <span class="time">ALL DAY</span>
+  </time>
+  <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+  <div class="info">
+    <h2 class="title"><%= event.title%></h2>
+    <p class="desc"><%= event.desc %></p>
+    <ul>
+      <li style="width:30%;"><a href="<%= event_url(event)%>"><span class="fa fa-globe"></span> View Details</a></li>
+
+      <% if signed_in? %>
+
+        <% if current_user.attending?(event) %>
+          <li style="width:70%;">      You have joined.  Your RSVP Status is <strong><%= Attendance.rsvp_status(event, current_user) %></strong>
+            <span class="glyphicon glyphicon-ok"></span></li>
+
+        <% end %>
+
+        <% if event.creator == current_user %>
+          <li style="width:70%;"> <%= link_to "edit", edit_event_url(event) %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+</li>
+
+

@@ -1,0 +1,27 @@
+
+<div class="row">
+  <div class="col-md-6 text-center">
+    <span class="float-md-left">
+      <aside class="span4">
+    <section>
+      <h1>
+<a href="<%= user_path(current_user) %>">
+  <%= gravatar_for current_user, size: 50 %>
+</a>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+    </span>
+  </div>
+  <div class="col-md-6 text-center">
+    <span class="float-md-right">
+        <%= link_to "Create a new event!", newevent_path,
+                    class: "btn btn-large btn-primary" %>
+    </span>
+  </div>
+</div>
+<hr>

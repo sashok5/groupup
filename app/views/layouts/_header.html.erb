@@ -1,0 +1,29 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+
+
+  <%= link_to "Group Up", root_path, class:"navbar-brand" %>
+  <div class="collapse navbar-collapse" >
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item"><%= link_to "Home", root_path, class:"nav-link" %></li>
+      <li class="nav-item"><%= link_to "Events", events_path, class:"nav-link" %></li>
+      <li class="nav-item"><%= link_to "Help", help_path, class:"nav-link" %></li>
+      <% if signed_in? %>
+        <li><%= link_to "Users", users_path, class:"nav-link" %></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <%= link_to "Profile", current_user, class:"dropdown-item" %>
+            <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item" %>
+            <%= link_to "Sign out", signout_path, method: "delete", class:"dropdown-item" %>
+          </div>
+        </li>
+
+      <% else %>
+        <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+
+    </ul>
+
+  </div>
+</nav>

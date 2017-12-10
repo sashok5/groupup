@@ -1,0 +1,17 @@
+<% provide(:title, 'Created events') %>
+
+<%= render 'shared/user_info' %>
+
+
+<h1>My Created Events</h1>
+
+
+<div class="row">
+  <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+    <ul class="event-list">
+
+    <%= render @events %>
+
+    </ul>
+  </div>
+</div>

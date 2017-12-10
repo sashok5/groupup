@@ -11,9 +11,6 @@ development:
 
 production:
   adapter: postgresql
-  prepared_statements: false
-
-
-production:
-  adapter: postgresql
-  statement_limit: 200
+  encoding: unicode
+  database: groupup
+  pool: 15

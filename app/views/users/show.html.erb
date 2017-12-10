@@ -1,0 +1,29 @@
+<% provide(:title, @user.name) %>
+
+<%= render 'shared/user_info' %>
+
+
+    <div class="row">
+      <aside class="span4">
+
+
+      <h3>Please update your interests</h3>
+      <%= form_for @user, url: {action: "update_interests"}, method: 'put' do |f| %>
+
+
+        <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |cb| %>
+
+          <div class="form-check">
+            <%= cb.label(class: "form-check-label") {cb.check_box(class: "form-check-input") + cb.text} %>
+          </div>
+
+        <% end %>
+
+
+
+        <div class="form-group">
+          <%= f.submit class: "btn btn-large btn-primary" %>
+        </div>
+          </aside>
+      <% end %>
+    </div>

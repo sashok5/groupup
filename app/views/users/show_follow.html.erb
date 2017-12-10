@@ -1,0 +1,27 @@
+<% provide(:title, @title) %>
+
+<%= render 'shared/user_info' %>
+
+
+<h1>
+  <%= @title %>
+</h1>
+
+<section>
+  <% if @users.any? %>
+    <div class="user_avatars">
+      <% @users.each do |user| %>
+        <%= link_to gravatar_for(user, size: 30), user %>
+      <% end %>
+    </div>
+  <% end %>
+</section>
+
+<div class="span8">
+  <% if @users.any? %>
+    <ul class="users">
+      <%= render @users %>
+    </ul>
+    <%= will_paginate %>
+  <% end %>
+</div>
