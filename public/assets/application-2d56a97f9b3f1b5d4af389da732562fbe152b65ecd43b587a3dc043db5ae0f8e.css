@@ -1,0 +1,612 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ */
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+/* line 4, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+div.main {
+  padding-top: 70px;
+}
+
+/* universal */
+/* line 25, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 29, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+body {
+  padding-top: 60px;
+}
+
+/* line 33, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+section {
+  overflow: auto;
+}
+
+/* line 37, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 41, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+/* line 43, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+/* line 50, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+/* line 54, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 61, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #eaeaea;
+}
+
+/* line 70, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+/* line 78, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+/* line 88, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+#logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* footer */
+/* line 96, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #eaeaea;
+}
+/* line 101, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+footer a {
+  color: #a3a3a3;
+}
+/* line 103, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+footer a:hover {
+  color: #bebebe;
+}
+/* line 107, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+footer small {
+  float: left;
+}
+/* line 110, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+footer ul {
+  float: right;
+  list-style: none;
+}
+/* line 113, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+/* miscellaneous */
+/* line 122, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* sidebar */
+/* line 133, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+aside section {
+  padding: 10px 0;
+  border-top: 1px solid #ededed;
+}
+/* line 136, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+aside section:first-child {
+  border: 0;
+  padding-top: 0;
+}
+/* line 140, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+aside section span {
+  display: block;
+  margin-bottom: 3px;
+  line-height: 1;
+}
+/* line 145, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+aside section h1 {
+  font-size: 1.4em;
+  text-align: left;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+/* line 155, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 160, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.stats {
+  overflow: auto;
+}
+/* line 162, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.stats a {
+  float: left;
+  padding: 0 10px;
+  border-left: 1px solid #ededed;
+  color: gray;
+}
+/* line 167, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.stats a:first-child {
+  padding-left: 0;
+  border: 0;
+}
+/* line 171, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.stats a:hover {
+  text-decoration: none;
+  color: #74a6ff;
+}
+/* line 176, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.stats strong {
+  display: block;
+}
+
+/* line 181, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+}
+/* line 184, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.user_avatars .gravatar {
+  margin: 1px 1px;
+}
+
+/* forms */
+/* line 192, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+input {
+  height: auto !important;
+}
+
+/* line 196, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+#error_explanation {
+  color: #f00;
+}
+/* line 198, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+#error_explanation ul {
+  list-style: none;
+  margin: 0 0 18px 0;
+}
+
+/* Users index */
+/* line 208, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.users {
+  list-style: none;
+  margin: 0;
+}
+/* line 211, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.users li {
+  overflow: auto;
+  padding: 10px 0;
+  border-top: 1px solid #ededed;
+}
+/* line 215, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.users li:last-child {
+  border-bottom: 1px solid #ededed;
+}
+
+/* line 221, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.content {
+  display: block;
+}
+
+/* line 224, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.timestamp {
+  color: #eaeaea;
+}
+
+/* line 227, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 232, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+aside textarea {
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+/* Space out content a bit */
+/* line 239, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+/* line 245, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Custom page header */
+/* line 253, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.header {
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+/* line 258, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+/* Custom page footer */
+/* line 265, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+/* Main marketing message and sign up button */
+/* line 272, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.jumbotron {
+  text-align: center;
+  border-bottom: .05rem solid #e5e5e5;
+}
+
+/* line 276, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Supporting marketing content */
+/* line 282, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.marketing {
+  margin: 3rem 0;
+}
+
+/* line 285, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+.marketing p + h4 {
+  margin-top: 1.5rem;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  /* line 292, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Space out the masthead */
+  /* line 299, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  /* line 303, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/custom.css.scss */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+/* line 3, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+body {
+  padding: 60px 0px;
+  background-color: gainsboro;
+}
+
+/* line 8, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list {
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 14, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+          box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+          box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+  padding: 0px;
+  margin: 0px 0px 20px;
+}
+
+/* line 21, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > time {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  background-color: #c52c66;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 30, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li:nth-child(even) > time {
+  background-color: #a552a7;
+}
+
+/* line 33, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > time > span {
+  display: none;
+}
+
+/* line 36, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > time > .day {
+  display: block;
+  font-size: 56pt;
+  font-weight: 100;
+  line-height: 1;
+}
+
+/* line 42, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li time > .month {
+  display: block;
+  font-size: 24pt;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* line 48, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > img {
+  width: 100%;
+}
+
+/* line 51, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info {
+  padding-top: 5px;
+  text-align: center;
+}
+
+/* line 55, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info > .title {
+  font-size: 17pt;
+  font-weight: 700;
+  margin: 0px;
+  text-align: left;
+}
+
+/* line 63, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info > .desc {
+  font-size: 13pt;
+  font-weight: 300;
+  margin: 0px;
+}
+
+/* line 68, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info > ul,
+.event-list > li > .social > ul {
+  display: table;
+  list-style: none;
+  margin: 10px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 77, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .social > ul {
+  margin: 0px;
+}
+
+/* line 80, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info > ul > li,
+.event-list > li > .social > ul > li {
+  display: table-cell;
+  cursor: pointer;
+  color: #1e1e1e;
+  font-size: 11pt;
+  font-weight: 300;
+  padding: 3px 0px;
+}
+
+/* line 89, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info > ul > li > a {
+  display: block;
+  width: 100%;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+/* line 95, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .social > ul > li {
+  padding: 0px;
+}
+
+/* line 98, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .social > ul > li > a {
+  padding: 3px 0px;
+}
+
+/* line 101, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.event-list > li > .info > ul > li:hover,
+.event-list > li > .social > ul > li:hover {
+  color: #1e1e1e;
+  background-color: #c8c8c8;
+}
+
+/* line 106, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.facebook a,
+.twitter a,
+.google-plus a {
+  display: block;
+  width: 100%;
+  color: #4b6ea8 !important;
+}
+
+/* line 113, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.twitter a {
+  color: #4fd5f8 !important;
+}
+
+/* line 116, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.google-plus a {
+  color: #dd4b39 !important;
+}
+
+/* line 119, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.facebook:hover a {
+  color: white !important;
+  background-color: #4b6ea8 !important;
+}
+
+/* line 123, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.twitter:hover a {
+  color: white !important;
+  background-color: #4fd5f8 !important;
+}
+
+/* line 127, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+.google-plus:hover a {
+  color: white !important;
+  background-color: #dd4b39 !important;
+}
+
+@media (min-width: 768px) {
+  /* line 133, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 0px;
+  }
+
+  /* line 140, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > time,
+  .event-list > li > img {
+    display: inline-block;
+  }
+
+  /* line 144, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > time,
+  .event-list > li > img {
+    width: 120px;
+    float: left;
+  }
+
+  /* line 149, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .info {
+    background-color: whitesmoke;
+    overflow: hidden;
+  }
+
+  /* line 153, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > time,
+  .event-list > li > img {
+    width: 120px;
+    height: 120px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  /* line 160, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .info {
+    position: relative;
+    height: 120px;
+    text-align: left;
+    padding-right: 40px;
+  }
+
+  /* line 166, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .info > .title,
+  .event-list > li > .info > .desc {
+    padding: 0px 10px;
+  }
+
+  /* line 170, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .info > ul {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  /* line 175, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .social {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 40px;
+  }
+
+  /* line 182, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .social > ul {
+    border-left: 1px solid #e6e6e6;
+  }
+
+  /* line 185, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .social > ul > li {
+    display: block;
+    padding: 0px;
+  }
+
+  /* line 189, /Users/theshaman/Documents/RubymineProjects/groupup/app/assets/stylesheets/eventlist.css */
+  .event-list > li > .social > ul > li > a {
+    display: block;
+    width: 40px;
+    padding: 10px 0px 9px;
+  }
+}
