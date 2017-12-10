@@ -33,7 +33,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.user = current_user
+    @event.creator = current_user
     if @event.save
       flash[:success] = "Event created!"
       redirect_to root_url
@@ -44,7 +44,8 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    if @event.save
+
+    if @event.update_attributes(event_params)
       flash[:success] = "Event updated!"
       redirect_to root_url
     else
@@ -87,8 +88,9 @@ class EventsController < ApplicationController
   private
 
     def event_params
-      params.require(:event).permit(:title, :desc, :event_host, :addr,
-                             :street, :city, :state, :zip, tag_ids: [])
+      params.require(:event).permit(:title, :desc, :event_host,
+                                    :event_date, :event_start_time, :addr,
+                                    :street, :city, :state, :zip, tag_ids: [])
     end
 
   def rsvp_params
