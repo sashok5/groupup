@@ -1,7 +1,7 @@
 GroupUp::Application.routes.draw do
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers, :created_events, :attending_events
       put :update_interests
     end
   end
@@ -23,8 +23,8 @@ GroupUp::Application.routes.draw do
   match '/about',   to: 'pages#about',   via: 'get'
   match '/contact', to: 'pages#contact', via: 'get'
   match '/events',  to: 'events#index',        via: 'get'
-  match '/created_events', to: 'events#created_events', via:'get'
-  match '/attending_events', to: 'events#attending_events', via:'get'
+  #match '/created_events', to: 'users#created_events', via:'get'
+  #match '/attending_events', to: 'users#attending_events', via:'get'
   match '/newevent', to: 'events#new', via:'get'
 
 end

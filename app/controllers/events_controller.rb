@@ -4,20 +4,6 @@ class EventsController < ApplicationController
     @events = Event.paginate(page: params[:page])
   end
 
-  def created_events
-    @events = current_user.created_events.paginate(page: params[:page])
-    @user = current_user
-  end
-
-  def attending_events
-@events = current_user.events
-@user = current_user
-  end
-
-  def upcoming
-    @events = Event.upcoming.paginate(page: params[:page])
-  end
-
   def show
     @event = Event.find(params[:id])
     @attendance = @event.attendances.find_by(:user_id=> current_user.id)

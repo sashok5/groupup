@@ -78,6 +78,20 @@ class UsersController < ApplicationController
     @events = @user.events_attending
   end
 
+  def created_events
+
+    @user = User.find(params[:id])
+    @events = @user.created_events.paginate(page: params[:page])
+
+  end
+
+  def attending_events
+
+    @user = User.find(params[:id])
+    @events = @user.events
+
+  end
+
   private
 
     def user_params

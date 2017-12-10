@@ -2,9 +2,11 @@
 
 <%= render 'shared/user_info' %>
 
+<% if current_user?(@user) %>
 
     <div class="row">
       <aside class="span4">
+
 
 
       <h3>Please update your interests</h3>
@@ -27,3 +29,18 @@
           </aside>
       <% end %>
     </div>
+  <% else %>
+
+  <div class="row">
+    <aside class="span4">
+
+      <%= render 'follow_form' if signed_in? %>
+
+      <h3>Users's intersts</h3>
+
+      <ul>
+      <%= render @user.tags %>
+      </ul>
+
+      </div>
+<% end %>
