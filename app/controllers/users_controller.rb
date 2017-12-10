@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :signed_in_user,
-                only: [:index, :edit, :update, :destroy, :following, :followers]
-  before_action :correct_user,   only: [:edit, :update]
+                only: [:index, :edit, :update, :update_interests, :destroy, :following, :followers]
+  before_action :correct_user,   only: [:edit, :update, :update_interests]
   before_action :admin_user,     only: :destroy
 
   def index
@@ -41,6 +41,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_interests
+
+    @tag_params = tag_params["tag_ids"].reject!{|a| a==""}
+    if @user.update_attribute(:tag_ids, @tag_params )
+      flash[:success] = "Interests updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     User.find(params[:user_id]).destroy
     flash[:success] = "User destroyed."
@@ -61,12 +72,22 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def attending
+    @title = "Attending"
+    @user = User.find(params[:id])
+    @events = @user.events_attending
+  end
+
   private
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, tag_ids: [])
     end
+
+  def tag_params
+    params.require(:user).permit(tag_ids: [])
+  end
 
     # Before filters
 

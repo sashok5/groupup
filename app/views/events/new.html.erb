@@ -1,22 +1,87 @@
 <% provide(:title, 'New Event') %>
 <h1>Create new event</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@event) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+<%= form_for(@event) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+<section>
+  <h3>Edit event information</h3>
 
-      <%= f.label :desc %>
-      <%= f.text_field :desc %>
-
-      <%= f.label :event_host %>
-      <%= f.text_field :event_host %>
-
-
-      <%= f.submit "Create my event", class: "btn btn-large btn-primary" %>
-    <% end %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control"  %>
   </div>
-</div>
+
+  <div class="form-group">
+    <%= f.label :desc, text="Event Description" %>
+    <%= f.text_area :desc, class: "form-control" %>
+  </div>
+  <div class="form-group">
+
+    <%= f.label :event_host%>
+    <%= f.text_field :event_host, class: "form-control" %>
+
+  </div>
+
+  <div class="form-group">
+    <%= f.label :event_date%>
+    <%= f.text_field :event_date, class: "form-control", placeholder: "MM-DD-YYYY" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :event_start_time%>
+    <%= f.text_field :event_start_time, class: "form-control", placeholder:"HH:MM" %>
+  </div>
+
+</section>
+<section>
+  <h3>Event location</h3>
+
+  <div class="form-group">
+
+    <%= f.label :addr, text="Address" %>
+    <%=	 f.text_field :addr, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+
+    <%= f.label :street %>
+    <%=	 f.text_field :street, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+
+    <%= f.label :city %>
+    <%=	 f.text_field :city, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+
+    <%= f.label :state %>
+    <%=	 f.text_field :state, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+
+    <%= f.label :zip %>
+    <%=	 f.text_field :zip, class: "form-control"  %>
+  </div>
+
+</section>
+
+<section>
+  <h3>Event interests</h3>
+
+  <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |cb| %>
+
+    <div class="form-check">
+      <%= cb.label(class: "form-check-label") {cb.check_box(class: "form-check-input") + cb.text} %>
+    </div>
+
+  <% end %>
+
+</section>
+
+
+<%= f.submit "Create event!", class: "btn btn-large btn-primary" %>
+<% end %>

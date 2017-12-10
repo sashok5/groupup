@@ -2,10 +2,17 @@ GroupUp::Application.routes.draw do
   resources :users do
     member do
       get :following, :followers
+      put :update_interests
+    end
+  end
+  resources :events do
+    member do
+      #get :attending_events, :created_events
+      post 'attend'
+      put 'rsvp'
     end
   end
   resources :sessions,      only: [:new, :create, :destroy]
-  resources :events,    only: [:index, :my_events, :upcoming_events, :create]
   resources :relationships, only: [:create, :destroy]
 
   root to: 'pages#home'
@@ -16,8 +23,8 @@ GroupUp::Application.routes.draw do
   match '/about',   to: 'pages#about',   via: 'get'
   match '/contact', to: 'pages#contact', via: 'get'
   match '/events',  to: 'events#index',        via: 'get'
-  match '/myevents', to: 'events#userevents', via:'get'
-  match '/upcomingevents', to: 'events#upcoming', via:'get'
-  match '/attendingevents', to: 'events#attending', via:'get'
+  match '/created_events', to: 'events#created_events', via:'get'
+  match '/attending_events', to: 'events#attending_events', via:'get'
   match '/newevent', to: 'events#new', via:'get'
+
 end

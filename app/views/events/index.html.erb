@@ -1,11 +1,13 @@
 <% provide(:title, 'All events') %>
-<h1>All events</h1>
+<h1>All Events</h1>
 
-<%= will_paginate %>
+  <div class="row">
+    <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+      <ul class="event-list">
+        <%= render @events %>
 
-<div class="container">
-<div class="row">
-  <%= render @events %>
-</div>
-</div>
-<%= will_paginate %>
+      </ul>
+    </div>
+  </div>
+
+

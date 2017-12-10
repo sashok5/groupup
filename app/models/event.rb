@@ -1,5 +1,8 @@
 class Event < ApplicationRecord
-  belongs_to :user, foreign_key: "created_by_user_id"
+  belongs_to :creator, class_name: "User", foreign_key: "created_by_user_id"
+  has_and_belongs_to_many :tags, join_table: "event_tags"
+  has_many :attendances
+  has_many :users, through: :attendances
   default_scope -> { order('created_at DESC') }
   validates :desc, presence: true, length: { maximum: 1000 }
   validates :created_by_user_id, presence: true
@@ -8,5 +11,7 @@ class Event < ApplicationRecord
     @upcoming_events = where('event_date > ?', after)
 
   end
+
+
 
 end

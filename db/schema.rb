@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206044423) do
+ActiveRecord::Schema.define(version: 20171209223242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "event_attendees", id: false, force: :cascade do |t|
+  create_table "attendances", id: false, force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "event_id"
     t.integer "RSVP_Status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_id", "user_id"], name: "index_event_attendees_on_event_id_and_user_id", unique: true
-    t.index ["event_id"], name: "index_event_attendees_on_event_id"
-    t.index ["user_id"], name: "index_event_attendees_on_user_id"
+    t.index ["event_id", "user_id"], name: "index_attendances_on_event_id_and_user_id", unique: true
+    t.index ["event_id"], name: "index_attendances_on_event_id"
+    t.index ["user_id"], name: "index_attendances_on_user_id"
   end
 
   create_table "event_posts", force: :cascade do |t|
@@ -102,8 +102,8 @@ ActiveRecord::Schema.define(version: 20171206044423) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
-  add_foreign_key "event_attendees", "events", primary_key: "event_id"
-  add_foreign_key "event_attendees", "users", primary_key: "user_id"
+  add_foreign_key "attendances", "events", primary_key: "event_id"
+  add_foreign_key "attendances", "users", primary_key: "user_id"
   add_foreign_key "event_posts", "events", primary_key: "event_id"
   add_foreign_key "event_posts", "users", primary_key: "user_id"
   add_foreign_key "event_tags", "events", primary_key: "event_id"

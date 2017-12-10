@@ -1,29 +1,34 @@
 <% if signed_in? %>
   <div class="row">
-    <aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-    </aside>
+   Hello, <%= current_user.name %>!  You might be interested in these events based on your interests:
   </div>
+
+  <%= render 'shared/upcoming_events' %>
+
+  <div class=" text-center">
+
+        <%= link_to "Create a new event!", newevent_path,
+                    class: "btn btn-large btn-primary" %>
+
+  </div>
+
 <% else %>
   <div class="center hero-unit">
     <h1>Welcome to Group Up</h1>
 
     <h2>
-      This is the home page for starting your own group and joining the exciting world of meetups and learning.
+      This is the home page for starting your own group and joining the exciting world of groups and meets.
     </h2>
 
     <%= link_to "Sign up now!", signup_path,
                                 class: "btn btn-large btn-primary" %>
   </div>
 
+  <section>
+    <h2>Here are some upcoming events that you might like!</h2>
+    <%= render 'shared/upcoming_events' %>
+  </section>
+
 <% end %>
 
-<section>
-  <h2>Here are some upcoming events that you might like!</h2>
-  <%= render 'shared/upcoming_events' %>
-</section>
+
