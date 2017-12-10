@@ -13,19 +13,26 @@
   </div>
 
 <% else %>
-  <div class="center hero-unit">
+  <div class=" hero-unit">
     <h1>Welcome to Group Up</h1>
 
-    <h2>
+    <p class="lead">
       This is the home page for starting your own group and joining the exciting world of groups and meets.
-    </h2>
+
+    </p>
+
+    <blockquote class="blockquote">
+      <p class="mb-0">This site is the best thing that ever happenned to me. When I hosted an event here, I made lots of friends and was able to learn C++. </p>
+      <footer class="blockquote-footer">Some random guy <cite title="Source Title">Off the street</cite></footer>
+    </blockquote>
+
 
     <%= link_to "Sign up now!", signup_path,
                                 class: "btn btn-large btn-primary" %>
   </div>
 
   <section>
-    <h2>Here are some upcoming events that you might like!</h2>
+    <h2 style="text-align:left;">Here are some upcoming events that you might like!</h2>
     <%= render 'shared/upcoming_events' %>
   </section>
 
