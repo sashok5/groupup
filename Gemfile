@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'composite_primary_keys', '>= 5.1'
-gem 'pg'
+gem 'pg', '= 0.21.0'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
