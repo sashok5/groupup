@@ -22,6 +22,7 @@ GroupUp::Application.routes.draw do
   match '/help',    to: 'pages#help',    via: 'get'
   match '/about',   to: 'pages#about',   via: 'get'
   match '/contact', to: 'pages#contact', via: 'get'
+  match '/donate',  to: 'pages#donate', via: [:get, :post]
   match '/events',  to: 'events#index',        via: 'get'
   #match '/created_events', to: 'users#created_events', via:'get'
   #match '/attending_events', to: 'users#attending_events', via:'get'

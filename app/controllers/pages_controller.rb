@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  $interest_images = Dir.glob("app/assets/images/interests/*.{gif,jpeg,png}")
+
   def home
     if signed_in?
       #@myevents  = current_user.events.build
@@ -16,4 +18,13 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def donate
+    if request.post?
+      flash[:success] = "Thank you for your donation!"
+      redirect_to root_path
+    end
+
+  end
+
 end

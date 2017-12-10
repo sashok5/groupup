@@ -1,0 +1,41 @@
+<% provide(:title, 'Donation') %>
+<h1>Donation</h1>
+<p>
+Hello <%= current_user.name %>, Group Up is a community running purely of
+ donations and sponsors and as you can see, our site does not have ads.  Please help support our community
+by making a donation: </p>
+
+<form method="post">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="donationamount">Donation amount</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>$25</option>
+      <option>$50</option>
+      <option>$100</option>
+      <option>$200</option>
+      <option>$500</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Custom donation amount</label>
+    <input type="email" class="form-control" id="customamount" placeholder="ex: $375">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Your message to us</label>
+    <textarea class="form-control" id="message" rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Donation on behalf of</label>
+    <input type="email" class="form-control" id="onbehalf" >
+  </div>
+
+  <%= button_to 'Donate', { controller: "pages", action: "donate" }, class: "btn btn-primary" %>
+
+
+</form>
