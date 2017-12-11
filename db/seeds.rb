@@ -36,6 +36,6 @@ Event.create (event_host: "Google",
  state: "NY", 
  zip: "11102", 
  created_by_user_id: 2,
- event_date: 2018_1_12, 
- event_start_time: 19:00) 
+ event_date: "2018-1-12", 
+ event_start_time: "19:00") 
  
