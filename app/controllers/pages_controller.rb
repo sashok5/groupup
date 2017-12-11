@@ -4,10 +4,19 @@ class PagesController < ApplicationController
 
   def home
     if signed_in?
-      #@myevents  = current_user.events.build
-      #@feed_items = current_user.feed.paginate(page: params[:page])
+
+      @your_interests =
+      current_user.tags
+
+      @events_for_you =
+          Event.joins(:tags)
+              .where('event_tags.tag_id': @your_interests.ids)
+
+
+   else
+
+     @upcoming_events =Event.upcoming.limit(5)
     end
-  @upcoming_events =Event.upcoming
   end
 
   def help

@@ -2,8 +2,19 @@
   <div class="row">
    Hello, <%= current_user.name %>!  You might be interested in these events based on your interests:
   </div>
+  <br>
 
-  <%= render 'shared/upcoming_events' %>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+      <ul class="event-list">
+        <%= render @events_for_you %>
+      </ul>
+    </div>
+  </div>
+
+
+  <%= link_to "View all upcoming events.", "events" %>
 
   <div class=" text-center">
 
@@ -34,6 +45,8 @@
   <section>
     <h2 style="text-align:left;">Here are some upcoming events that you might like!</h2>
     <%= render 'shared/upcoming_events' %>
+    <%= link_to "View all upcoming events.", "events" %>
+
   </section>
 
 <% end %>
