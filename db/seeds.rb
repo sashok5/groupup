@@ -27,7 +27,7 @@ Tag.create(name: 'Programming', popularity: 1)
 Tag.create(name: 'Start-ups', popularity: 1)
 Tag.create(name: 'Writing', popularity: 1)
 
-Event.create (event_host: "Google", 
+Event.create(event_host: "Google", 
  title: "Women in Tech", 
  desc: "Weekly lightening talks from prominent women in tech",
  addr: "4082", 
