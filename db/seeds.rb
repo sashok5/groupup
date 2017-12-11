@@ -26,3 +26,20 @@ Tag.create(name: 'Running', popularity: 1)
 Tag.create(name: 'Programming', popularity: 1)
 Tag.create(name: 'Start-ups', popularity: 1)
 Tag.create(name: 'Writing', popularity: 1)
+
+ create_table "events", primary_key: "event_id", force: :cascade do |t|
+    t.string "event_host", "Google"
+    t.string "title", "Women in Tech"
+    t.string "desc", "Weekly lightening talks from prominent women in tech"
+    t.string "addr", "4082"
+    t.string "street", "East 34th Street"
+    t.string "city", "New York"
+    t.string "state", "NY"
+    t.string "zip", "11102"
+    t.bigint "created_by_user_id", null: false
+    t.integer "event_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false          
+    t.date "event_date", 2018_1_12
+    t.time "event_start_time", 19:00
+ end
