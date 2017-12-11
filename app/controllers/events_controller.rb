@@ -14,7 +14,11 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @attendance = @event.attendances.find_by(:user_id=> current_user.id)
+    @attending = User.joins(:attendances).where('attendances.event_id'=> params[:id])
+    if signed_in?
+      @attendance = @event.attendances.find_by(:user_id=> current_user.id)
+    end
+
   end
 
  def edit

@@ -1,16 +1,19 @@
 <% provide(:title, @event.title) %>
 
+<% if signed_in? && @event.creator == current_user %>
+   <%= link_to "This is your event, would you like to edit?", edit_event_url(@event) %>
 
-
-  <div class="jumbotron">
+<% end %>
+<div class="row">
+  <div class="col-lg-8"> <div class="jumbotron">
     <h1 class="display-3"><%= @event.title %></h1>
     <p class="lead"><%= @event.desc %>
     </p>
-      <% if signed_in? %>
+    <% if signed_in? %>
 
-        <% if current_user.attending?(@event) %>
+      <% if current_user.attending?(@event) %>
 
-        <p>You aleady joined this even, please RSVP. Are you attending?
+        <p>You joined this even, please RSVP. Are you attending?
 
           <%= form_for @attendance, url: {action: "rsvp"}, method: 'put' do |f| %>
             Yes <%= f.radio_button :RSVP_Status, "1" %>
@@ -21,26 +24,60 @@
 
         </p>
 
-        <% else %>
+      <% else %>
         <p>
           <%= button_to 'Attend this event!', attend_event_path(@event), class: "btn btn-lg btn-success", form: {style: 'display:inline-block;'}, method: :post %>
         </p>
-        <% end %>
-
       <% end %>
+
+    <% end %>
   </div>
 
-  <div class="row marketing">
-    <div class="col-lg-6">
-      <h4>When</h4>
-      <p>On <%= @event.event_date %>, at <%= @event.event_start_time %>.</p>
+    <div class="row marketing">
+      <div class="col-lg-5">
 
-      <h4>Where</h4>
-      <p><%= @event.addr %>, <%= @event.street %><br>
-        <%= @event.city %> <%= @event.state %>, <%= @event.zip %></p>
+        <h4>When</h4>
+        <p><%= @event.event_date %> Starts <%= time(@event.event_start_time) %></p>
+      </div>
+      <div class="col-lg-4">
+        <h4>Where</h4>
+        <p><%= @event.addr %> <%= @event.street %>
+          <%= @event.city %> <%= @event.state %> <%= @event.zip %></p>
+      </div>
+        <div class="col-lg-3">
+        <h4>Hosted by</h4>
+        <p><%= @event.event_host %></p>
+      </div>
 
-      <h4>Hosted by</h4>
-      <p><%= @event.event_host %></p>
     </div>
+    <div class="row marketing">
+      <div class="col-lg-2">
+      <h4>Interests: </h4>
+      </div>
+      <div class="col-lg-7">
+          <% @event.tags.each do |tag| %>
+          <button type="button" class="btn btn-secondary"><%= tag.name %></button>
+          <% end %>
 
+      </div>
+    </div>
   </div>
+  <div class="col-lg-4">
+    <h3>Who's attending</h3>
+    <hr>
+    <div class="list-group">
+    <% @attending.each do |user| %>
+
+
+<aside> <%= gravatar_for user, size: 52 %>
+  <%= link_to user.name, user %>
+</aside>
+<hr>
+    <%end%>
+
+
+
+    </div>
+  </div>
+</div>
+

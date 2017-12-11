@@ -15,4 +15,8 @@ module PagesHelper
         date.strftime("%Y")
   end
 
+  def time(date)
+    date.nil? ? "All Day" :
+        date.strftime("%I") + ':' + date.strftime("%M") + ' ' + date.strftime("%p")
+  end
 end

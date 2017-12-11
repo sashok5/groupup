@@ -39,7 +39,9 @@
       <h3>Users's intersts</h3>
 
       <ul>
-      <%= render @user.tags %>
+        <% @user.tags.each do |tag| %>
+        <li><%= tag.name %></li>
+        <% end %>
       </ul>
 
       </div>
