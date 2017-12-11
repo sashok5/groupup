@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
+=begin
 Tag.create(name: 'Comedy', popularity: 1)
 Tag.create(name: 'Foreign Languages', popularity: 1)
 Tag.create(name: 'Travel', popularity: 1)
@@ -26,6 +27,7 @@ Tag.create(name: 'Running', popularity: 1)
 Tag.create(name: 'Programming', popularity: 1)
 Tag.create(name: 'Start-ups', popularity: 1)
 Tag.create(name: 'Writing', popularity: 1)
+=end
 
 Event.create (event_host: "Google", 
  title: "Women in Tech", 
