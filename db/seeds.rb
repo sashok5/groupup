@@ -26,3 +26,16 @@ Tag.create(name: 'Running', popularity: 1)
 Tag.create(name: 'Programming', popularity: 1)
 Tag.create(name: 'Start-ups', popularity: 1)
 Tag.create(name: 'Writing', popularity: 1)
+
+Event.create (event_host: "Google", 
+ title: "Women in Tech", 
+ desc: "Weekly lightening talks from prominent women in tech",
+ addr: "4082", 
+ street: "East 34th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "11102", 
+ created_by_user_id: 2,
+ event_date: "2018-1-12", 
+ event_start_time: "19:00") 
+ 
