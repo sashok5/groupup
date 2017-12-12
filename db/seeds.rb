@@ -459,3 +459,76 @@ Event.create(event_host: "Queens Theatre",
  event_date: "2017-03-14", 
  event_start_time: "18:00") 
 
+Event.create(event_host: "Travel Buddies Group-Up", 
+ title: "Weekly Group-Up", 
+ desc: "Talk about recent travel and future plans, maybe even meet a new travel buddy!",
+ addr: "4309", 
+ street: "32th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "11003", 
+ created_by_user_id: 1,
+ event_date: "2017-1-16", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "Travel Buddies Group-Up", 
+ title: "Weekly Group-Up", 
+ desc: "Talk about recent travel and future plans, maybe even meet a new travel buddy!",
+ addr: "4309", 
+ street: "32th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "11003", 
+ created_by_user_id: 1,
+ event_date: "2017-1-23", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "Travel Buddies Group-Up", 
+ title: "Weekly Group-Up", 
+ desc: "Talk about recent travel and future plans, maybe even meet a new travel buddy!",
+ addr: "4309", 
+ street: "32th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "11003", 
+ created_by_user_id: 1,
+ event_date: "2017-1-30", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "Spanish Language Learning Group-Up", 
+ title: "Weekly Group-Up", 
+ desc: "Practice your language skills with other learners",
+ addr: "5690", 
+ street: "29th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "10946", 
+ created_by_user_id: 1,
+ event_date: "2017-1-31", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "French Language Learning Group-Up", 
+ title: "Weekly Group-Up", 
+ desc: "Practice your language skills with other learners",
+ addr: "7800", 
+ street: "78th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "10916", 
+ created_by_user_id: 1,
+ event_date: "2017-1-07", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "Japanese Language Learning Group-Up", 
+ title: "Weekly Group-Up", 
+ desc: "Practice your language skills with other learners",
+ addr: "1097", 
+ street: "73th Street",
+ city: "Borrklyn", 
+ state: "NY", 
+ zip: "10109", 
+ created_by_user_id: 1,
+ event_date: "2017-3-03", 
+ event_start_time: "18:00") 
+
+
