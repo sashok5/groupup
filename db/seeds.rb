@@ -423,4 +423,39 @@ Event.create(event_host: "Potter's Corner",
  event_date: "2018-2-14", 
  event_start_time: "18:00")
 
+Event.create(event_host: "American Bar and Grill", 
+ title: "Karaoke Night", 
+ desc: "Good food and great tunes at Karaoke Night!",
+ addr: "7901", 
+ street: "14th Street",
+ city: "New York", 
+ state: "NY", 
+ zip: "10092", 
+ created_by_user_id: 1,
+ event_date: "2018-2-15", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "NY Community Board", 
+ title: "Holiday Concert", 
+ desc: "Come celebrate the Holiday season with our annual concert",
+ addr: "3781", 
+ street: "70th Street",
+ city: "Queens", 
+ state: "NY", 
+ zip: "11372", 
+ created_by_user_id: 1,
+ event_date: "2017-12-20", 
+ event_start_time: "18:00") 
+
+Event.create(event_host: "Queens Theatre", 
+ title: "Horror Movie Night", 
+ desc: "Come and enjoy the best of the genre, with $2 popcorn!",
+ addr: "7143", 
+ street: "30th Ave",
+ city: "LIC", 
+ state: "NY", 
+ zip: "11103", 
+ created_by_user_id: 1,
+ event_date: "2017-03-14", 
+ event_start_time: "18:00") 
 
