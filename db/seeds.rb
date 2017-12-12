@@ -387,3 +387,40 @@ Event.create(event_host: "New York Comedy Club",
  event_date: "2018-2-17", 
  event_start_time: "20:00") 
 
+Event.create(event_host: "New York Toastmasters", 
+ title: "Weekly Group-Up", 
+ desc: "Improve your public speaking skills at out weekly group-up",
+ addr: "7690", 
+ street: "55th street",
+ city: "New York", 
+ state: "NY", 
+ zip: "10090", 
+ created_by_user_id: 1,
+ event_date: "2017-12-19", 
+ event_start_time: "19:00") 
+
+Event.create(event_host: "New York Toastmasters", 
+ title: "Weekly Group-Up", 
+ desc: "Improve your public speaking skills at out weekly group-up",
+ addr: "7690", 
+ street: "55th street",
+ city: "New York", 
+ state: "NY", 
+ zip: "10090", 
+ created_by_user_id: 1,
+ event_date: "2018-1-02", 
+ event_start_time: "19:00")
+
+Event.create(event_host: "Potter's Corner", 
+ title: "Valentine's Day Pottery Class", 
+ desc: "Learn to make pottery with your special someone!",
+ addr: "7952", 
+ street: "78th street",
+ city: "Brooklyn", 
+ state: "NY", 
+ zip: "10876", 
+ created_by_user_id: 1,
+ event_date: "2018-2-14", 
+ event_start_time: "18:00")
+
+
