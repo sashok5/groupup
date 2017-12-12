@@ -4,9 +4,28 @@
 
 <% if current_user?(@user) %>
 
-    <div class="row">
-      <aside class="span4">
 
+  <h3>Today's Feed</h3>
+    <% @user.feed.each do |feed| %>
+      <div class="row" style="width:600px;">
+
+        <div class="col-lg-1" style="font-size:x-small">
+        <%= time(DateTime.parse(feed['updated_at']))  %>
+      </div>
+
+  <div class="col-lg-11">
+    <%=feed['name'] %> is attending <strong><%= link_to feed['title'],  event_path(options={id: feed['event_id']}) %> </strong>
+
+  </div>
+
+      </div>
+
+  <% end %>
+
+  <hr>
+
+  <div class="row">
+      <aside class="span4">
 
 
       <h3>Please update your interests</h3>
@@ -20,8 +39,6 @@
           </div>
 
         <% end %>
-
-
 
         <div class="form-group">
           <%= f.submit class: "btn btn-large btn-primary" %>

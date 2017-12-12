@@ -29,6 +29,15 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+  def feed
+
+     ActiveRecord::Base.connection.exec_query("SELECT u.name, a.updated_at, e.title, e.event_id FROM attendances a
+                            join events e on e.event_id = a.event_id
+                            join relationships r on r.follower_id = #{self.id}
+                            join users u on u.user_id = r.followed_id
+                             order by a.updated_at DESC")
+
+  end
 
 
   def following?(other_user)
