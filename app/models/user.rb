@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
                             join events e on e.event_id = a.event_id
                             join relationships r on r.followed_id = a.user_id
                             join users u on u.user_id = r.followed_id
-                            WHERE r.follower_id = #{self.id}
+                            WHERE r.follower_id = #{self.id} and a.created_at > current_date
                              order by a.created_at DESC")
 
   end
