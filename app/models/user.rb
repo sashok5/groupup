@@ -31,11 +31,11 @@ class User < ActiveRecord::Base
 
   def feed
 
-     ActiveRecord::Base.connection.exec_query("SELECT u.name, a.updated_at, e.title, e.event_id FROM attendances a
+     ActiveRecord::Base.connection.exec_query("SELECT u.name, a.created_at, e.title, e.event_id FROM attendances a
                             join events e on e.event_id = a.event_id
                             join relationships r on r.follower_id = #{self.id}
                             join users u on u.user_id = r.followed_id
-                             order by a.updated_at DESC")
+                             order by a.created_at DESC")
 
   end
 
