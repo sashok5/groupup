@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
    else
 
-     @upcoming_events =Event.upcoming
+     @upcoming_events =Event.upcoming.limit(10)
     end
   end
 
