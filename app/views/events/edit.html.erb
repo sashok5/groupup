@@ -36,7 +36,7 @@
 
       <div class="row">
       <% $event_snippets.each do |image| %>
-          <%= image.split('/').last %>
+          
           <div class="col-sm-1" style="text-align:center;">
 
               <%= image_tag "eventsnippets/#{image.split('/').last}", size:100 %>
