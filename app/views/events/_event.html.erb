@@ -8,8 +8,8 @@
   </time>
   <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
   <div class="info">
-    <h2 class="title"><%= event.title%></h2>
-    <p class="desc"><%= event.desc %></p>
+    <h2 class="title"><%= event.event_host%></h2>
+    <p class="desc"><%= event.title %></p>
     <p class="desc">
     Interests: <% event.tags.each do |tag| %>
       <button type="button" class="btn btn-secondary btn-sm"><%= tag.name %></button>

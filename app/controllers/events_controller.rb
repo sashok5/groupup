@@ -4,9 +4,9 @@ class EventsController < ApplicationController
     @interest = nil
 
     if params[:interest].nil?
-    @events = Event.paginate(page: params[:page])
+      @events = Event.upcoming
     else
-       @events = Event.joins(:tags).where('tags.tag_id' => params[:interest])
+       @events = Event.joins(:tags).where('tags.tag_id' => params[:interest]).order('event_date asc')
       @interest = Tag.find_by_tag_id(params[:interest])
     end
 
