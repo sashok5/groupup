@@ -6,7 +6,9 @@
     <span class="year"><%= year(event.event_date) %></span>
     <span class="time">ALL DAY</span>
   </time>
-  <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+  <% if !event.snippet_image.nil? %>
+    <%= image_tag "eventsnippets/#{event.snippet_image}", size:100 %>
+    <% end %>
   <div class="info">
     <h2 class="title"><%= event.event_host%></h2>
     <p class="desc"><%= event.title %></p>

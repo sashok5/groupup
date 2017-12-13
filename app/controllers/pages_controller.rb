@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
 
-  $interest_images = Dir.glob("app/assets/images/interests/*.{gif,jpeg,png}")
 
   def home
     if signed_in?

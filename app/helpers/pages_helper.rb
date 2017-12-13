@@ -1,5 +1,9 @@
 module PagesHelper
 
+  $interest_images = Dir.glob("app/assets/images/interests/*.{gif,jpeg,png}")
+
+  $event_snippets = Dir.glob("app/assets/images/eventsnippets/*.{jpeg,jpg,png}")
+
   def day(date)
     date.nil? ? 0 :
     date.mday

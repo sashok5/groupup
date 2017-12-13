@@ -1,4 +1,4 @@
 
-$('input[type=radio]').on('change', function() {
+$('div.jumbotron input[type=radio]').on('change', function() {
     $(this).closest("form").submit();
 });
