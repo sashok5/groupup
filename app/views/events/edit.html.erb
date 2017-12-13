@@ -32,16 +32,17 @@
     </div>
 
     <div class="form-group">
-      <%=f.label :event_snippet, text="Event Image" %><br>
+      <%=f.label :snippet_image, text="Event Image" %><br>
 
       <div class="row">
       <% $event_snippets.each do |image| %>
-
+          <%= image.split('/').last %>
           <div class="col-sm-1" style="text-align:center;">
 
               <%= image_tag "eventsnippets/#{image.split('/').last}", size:100 %>
             <br>
-            <%= f.radio_button :snippet_image, image.split('/').last ,:checked => (@event.snippet_image == image.split('/').last) %>
+            <%= f.radio_button :snippet_image, image.split('/').last, :checked => (@event.snippet_image == image.split('/').last) %>
+
 
           </div>
       <% end %>
