@@ -64,6 +64,18 @@ ActiveRecord::Schema.define(version: 20171213021620) do
     t.string "snippet_image"
   end
 
+  create_table "popular", primary_key: "event_id", force: :cascade do |t|
+    t.string "title"
+    t.integer "rank"
+    t.index ["event_id"], name: "index_popular_on_event_id"
+  end
+
+  create_table "recommended", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "user_id"
+    t.integer "rank"
+  end
+
   create_table "relationships", force: :cascade do |t|
     t.bigint "follower_id"
     t.bigint "followed_id"
