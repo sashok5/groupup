@@ -10,8 +10,4 @@ class Event < ApplicationRecord
   def self.upcoming(after = DateTime.now, limit = 100)
     where('event_date > ?', after)
   end
-
-  def popular
-    Popular.where(event_id: self.id).first_or_create
-  end
 end
