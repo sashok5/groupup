@@ -1,4 +1,3 @@
-
 <li>
   <time datetime="<%= event.event_date %>">
     <span class="day"><%= day(event.event_date) %></span>
@@ -6,16 +5,16 @@
     <span class="year"><%= year(event.event_date) %></span>
     <span class="time">ALL DAY</span>
   </time>
-  <% if !event.snippet_image.nil? %>
+  <% unless event.snippet_image.nil? %>
     <%= image_tag "eventsnippets/#{event.snippet_image}", size:100 %>
-    <% end %>
+  <% end %>
   <div class="info">
     <h2 class="title"><%= event.event_host%></h2>
     <p class="desc"><%= event.title %></p>
     <p class="desc">
-    Interests: <% event.tags.each do |tag| %>
-      <button type="button" class="btn btn-secondary btn-sm"><%= tag.name %></button>
-    <% end %>
+      Interests: <% event.tags.each do |tag| %>
+        <button type="button" class="btn btn-secondary btn-sm"><%= tag.name %></button>
+      <% end %>
     </p>
     <ul>
       <li style="width:30%;"><a href="<%= event_url(event)%>"><span class="fa fa-globe"></span> View Details</a></li>
@@ -25,7 +24,6 @@
         <% if current_user.attending?(event) %>
           <li style="width:70%;">      Your RSVP Status is <strong><%= Attendance.rsvp_status(event, current_user) %></strong>
             <span class="glyphicon glyphicon-ok"></span></li>
-
         <% end %>
 
         <% if event.creator == current_user %>
@@ -37,5 +35,3 @@
   </div>
 
 </li>
-
-
