@@ -1,23 +1,16 @@
 class PagesController < ApplicationController
 
-
   def home
     if signed_in?
-
-      @your_interests =
-      current_user.tags
-
-      @events_for_you =
-          Event.joins(:tags)
-              .where('event_tags.tag_id': @your_interests.ids)
-              .order('events.event_date ASC')
-              .distinct
-
-
-   else
-
-     @upcoming_events =Event.upcoming.limit(10)
-
+      @your_interests = current_user.tags
+      return unless @your_interests.any?
+      @events_for_you = Event.joins(:tags)
+                            .where('event_tags.tag_id' => @your_interests.ids)
+                            .order('events.event_date ASC')
+                            .distinct
+    else
+      @upcoming_events = Event.upcoming.limit(2)
+      @popular_events = Popular.events
     end
   end
 

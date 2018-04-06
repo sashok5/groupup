@@ -1,0 +1,11 @@
+<% if @upcoming_events.any? %>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+      <ul class="event-list">
+    <%= render partial: 'events/event', collection: @upcoming_events %>
+      </ul>
+    </div>
+  </div>
+
+<% end %>

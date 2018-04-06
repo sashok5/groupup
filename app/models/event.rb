@@ -8,11 +8,10 @@ class Event < ApplicationRecord
   validates :created_by_user_id, presence: true
 
   def self.upcoming(after = DateTime.now, limit = 100)
-    @upcoming_events =
-            where('event_date > ?', after)
-
+    where('event_date > ?', after)
   end
 
-
-
+  def popular
+    Popular.where(event_id: self.id).first_or_create
+  end
 end
